@@ -463,6 +463,10 @@ M.name = function(config, node, state)
     text = text
   end
 
+  if node.type == "file" then
+    highlight = M.modified({}, node, state).highlight or highlight
+  end
+
   return {
     text = text,
     highlight = highlight,
