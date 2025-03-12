@@ -104,7 +104,7 @@ M.follow = function(callback, force_show)
   end
   utils.debounce("neo-tree-follow", function()
     return follow_internal(callback, force_show)
-  end, 100, utils.debounce_strategy.CALL_LAST_ONLY)
+  end, 5, utils.debounce_strategy.CALL_LAST_ONLY)
 end
 
 ---@param path string?
